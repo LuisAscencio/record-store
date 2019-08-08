@@ -1,0 +1,24 @@
+<h1>DJ</h1>
+<br>
+<br>
+<br>
+
+<h2>
+
+<p><%= @dj.name %></p>
+<p>Age: <%= @dj.age %></p>
+</h2>
+
+
+<p>Records:
+    <ul>
+    <%@dj.records.each do |record| %>
+        <li>
+       <p> 
+           Title: <a href="/records/<%= record.id %>"> <%= record.title %></a>, Label: <%= record.label %> 
+       </p>
+        <br>
+        </li>
+        <% end %>
+    </ul>
+</p> 

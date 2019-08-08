@@ -1,0 +1,12 @@
+<h1>Insert new record</h1>
+
+<form method='POST' action='/records'>
+    <label>Title:<input type='text' name='title'></label>
+    <label>Label:<input type='text' name='label'></label>
+    <select name="dj_id">
+    <% @djs.each do |dj| %>
+    <option value="<%= dj.id %>"><%= dj.name %></option>
+        <% end %>
+    </select>
+    <label>submit<input type='submit'></label>
+</form>
